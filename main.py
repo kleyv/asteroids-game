@@ -2,6 +2,7 @@ import pygame
 from constants import * 
 from player import Player
 from asteroidfield import *
+import sys
 
 def main():
     # print("Hello from asteroids-game!")
@@ -37,6 +38,20 @@ def main():
             object.draw(screen)
         
         updatable.update(dt)
+
+        # for i in range(0, len(asteroids)-1):
+        #     print(asteroids)
+        #     for j in range(1, len(asteroids)-2):
+        #         print(asteroids[i].position, asteroids[j].position)
+        #         if asteroids[i].is_colliding(asteroids[j]):
+        #             print("Game over!")
+        #             sys.exit()
+        
+        for asteroid in asteroids:
+            if asteroid.is_colliding(player):
+                print("Game is over!")
+                sys.exit()
+        
         pygame.display.flip()
         dt = clock.tick(60) / 1000
 
