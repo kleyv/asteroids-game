@@ -1,6 +1,7 @@
 import pygame
 from constants import * 
 from player import Player
+
 def main():
     # print("Hello from asteroids-game!")
     print("Starting Asteroids!")
@@ -18,8 +19,7 @@ def main():
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
     player = Player(x,y)
-    # counter = 0
-    # while counter < 2000:
+    
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -30,7 +30,6 @@ def main():
             object.draw(screen)
         
         updatable.update(dt)
-        # counter += 1
         pygame.display.flip()
         dt = clock.tick(60) / 1000
 
