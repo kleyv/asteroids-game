@@ -10,12 +10,13 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
     counter = 0
-    while counter < 2000:
+    # while counter < 2000:
+    while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
         screen.fill('black')
-        counter += 1
+        # counter += 1
         pygame.display.flip()
 
 
