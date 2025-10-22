@@ -6,7 +6,6 @@ from shot import Shot
 import sys
 
 def main():
-    # print("Hello from asteroids-game!")
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
@@ -44,14 +43,6 @@ def main():
         
         updatable.update(dt)
 
-        # for i in range(0, len(asteroids)-1):
-        #     print(asteroids)
-        #     for j in range(1, len(asteroids)-2):
-        #         print(asteroids[i].position, asteroids[j].position)
-        #         if asteroids[i].is_colliding(asteroids[j]):
-        #             print("Game over!")
-        #             sys.exit()
-        
         for asteroid in asteroids:
             if asteroid.is_colliding(player):
                 print("Game is over!")
